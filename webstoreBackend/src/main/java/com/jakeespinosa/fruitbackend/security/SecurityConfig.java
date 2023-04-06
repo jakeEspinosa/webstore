@@ -8,7 +8,7 @@ import org.springframework.security.provisioning.JdbcUserDetailsManager;
 import org.springframework.security.provisioning.UserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 import javax.sql.DataSource;
-
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 
 @Configuration
@@ -33,19 +33,25 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
+                .csrf().disable()
                 .authorizeHttpRequests()
-                    .requestMatchers("/products").permitAll()
+                    .requestMatchers("/auth/registration.html", "/js/**", "/users").permitAll()
                     .anyRequest().authenticated()
                     .and()
                 .formLogin()
                     .permitAll()
                     .and()
                 .logout()
-                    .permitAll()
-                    .and()
-                .httpBasic();
+                    .permitAll();
 
         return http.build();
     }
+
+    @Bean
+    public BCryptPasswordEncoder bCryptPasswordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+
+
 
 }
