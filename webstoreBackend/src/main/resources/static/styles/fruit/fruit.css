@@ -1,0 +1,39 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+
+.main-content {
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.picture {
+    height: 50vh;
+    width: 30vw;
+}
+
+.delivery {
+    height: 80vh;
+    width: 15vw;
+}
+
+.reviews {
+    height: 30vh;
+    width: 30vw;
+}
+
+.box {
+    border: 1px solid black;
+    border-radius: 1%;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
