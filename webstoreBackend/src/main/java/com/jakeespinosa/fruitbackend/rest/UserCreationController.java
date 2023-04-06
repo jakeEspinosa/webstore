@@ -9,7 +9,6 @@ import com.jakeespinosa.fruitbackend.entity.User;
 import com.jakeespinosa.fruitbackend.exception.UserAlreadyExistsException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.rest.webmvc.RepositoryRestController;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
