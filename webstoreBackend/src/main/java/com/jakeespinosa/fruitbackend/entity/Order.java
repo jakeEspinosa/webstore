@@ -30,23 +30,23 @@ public class Order {
     private int bananasPurchased;
 
     @Column(name="watermelon_purchased")
-    private int watermelonPurchased;
+    private int watermelonsPurchased;
 
     public Order() {
 
     }
 
-    public Order(long timeStamp, int applesPurchased, int bananasPurchased, int watermelonPurchased) {
+    public Order(long timeStamp, int applesPurchased, int bananasPurchased, int watermelonsPurchased) {
         this.timeStamp = timeStamp;
         this.applesPurchased = applesPurchased;
         this.bananasPurchased = bananasPurchased;
-        this.watermelonPurchased = watermelonPurchased;
+        this.watermelonsPurchased = watermelonsPurchased;
     }
 
-    public Order(int applesPurchased, int bananasPurchased, int watermelonPurchased) {
+    public Order(int applesPurchased, int bananasPurchased, int watermelonsPurchased) {
         this.applesPurchased = applesPurchased;
         this.bananasPurchased = bananasPurchased;
-        this.watermelonPurchased = watermelonPurchased;
+        this.watermelonsPurchased = watermelonsPurchased;
     }
 
     public int getId() {
@@ -81,12 +81,12 @@ public class Order {
         this.bananasPurchased = bananasPurchased;
     }
 
-    public int getWatermelonPurchased() {
-        return watermelonPurchased;
+    public int getWatermelonsPurchased() {
+        return watermelonsPurchased;
     }
 
-    public void setWatermelonPurchased(int watermelonPurchased) {
-        this.watermelonPurchased = watermelonPurchased;
+    public void setWatermelonsPurchased(int watermelonsPurchased) {
+        this.watermelonsPurchased = watermelonsPurchased;
     }
 
     @Override
@@ -96,7 +96,7 @@ public class Order {
                 ", timeStamp=" + timeStamp +
                 ", applesPurchased=" + applesPurchased +
                 ", bananasPurchased=" + bananasPurchased +
-                ", watermelonPurchased=" + watermelonPurchased +
+                ", watermelonsPurchased=" + watermelonsPurchased +
                 '}';
     }
 
